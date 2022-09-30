@@ -4,7 +4,7 @@ import dayjs from "dayjs";
 
 export default function Hero() {
   return (
-    <div class="max-w-[1440px] mx-auto flex flex-col">
+    <div class="mx-auto flex min-h-screen max-w-[1284px] flex-col">
       <Header />
       <Main title="Software Engineer" />
     </div>
@@ -16,19 +16,29 @@ const Header = () => {
   const day = dayjs().format("dddd");
   const year = dayjs().year();
   return (
-    <header class="flex mt-5 justify-between items-center text-black pointer-events-none font-inter text-lg font-semibold">
-      <button class="py-1 px-4 rounded bg-gray-100 shadow-sm">{date}</button>
-      <button class="py-1 px-4 rounded bg-gray-100 shadow-sm">{day}</button>
-      <button class="py-1 px-4 rounded bg-gray-100 shadow-sm">{year}</button>
+    <header class="pointer-events-none mt-5 flex min-h-[10vh] items-center justify-between font-inter font-semibold text-slate-700">
+      <button class="rounded border bg-slate-100 py-1 px-4 shadow-sm">
+        {date}
+      </button>
+      <button class="rounded border bg-slate-100 py-1 px-4 shadow-sm">
+        {day}
+      </button>
+      <button class="rounded border bg-slate-100 py-1 px-4 shadow-sm">
+        {year}
+      </button>
     </header>
   );
 };
 
 const Main = ({ title }) => {
   return (
-    <div>
-      <h1 class="font-sora ">{title}</h1>
-      <h2>CLP, Indoneia</h2>
-    </div>
+    <section class="mt-64 flex flex-col space-y-2">
+      <h1 class="font-sora text-5xl font-bold uppercase text-slate-800">
+        {title}
+      </h1>
+      <p class="font-inter text-4xl font-normal uppercase text-slate-400">
+        - CLP, Indonesia
+      </p>
+    </section>
   );
 };
