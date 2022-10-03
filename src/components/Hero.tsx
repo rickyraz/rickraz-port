@@ -16,7 +16,7 @@ const Header = () => {
   const day = dayjs().format("dddd");
   const year = dayjs().year();
   return (
-    <header class="pointer-events-none mt-5 flex min-h-[10vh] items-center justify-between font-inter font-semibold text-slate-700">
+    <header class="pointer-events-none mt-5 flex min-h-[10vh] items-center justify-between px-4 font-inter font-semibold text-slate-700 md:px-0">
       <button class="rounded border bg-slate-100 py-1 px-4 shadow-sm">
         {date}
       </button>
