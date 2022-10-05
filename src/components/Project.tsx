@@ -3,7 +3,7 @@ import { useRef, useState, useEffect } from "preact/hooks";
 
 export default function Project() {
   return (
-    <section class="mx-auto mb-16 box-border max-w-[1284px] px-4 font-inter md:mb-24 md:px-0">
+    <section class="mx-auto mb-8 box-border max-w-[1284px] px-4 font-inter md:mb-24 md:px-0">
       <hr class="border-t-[3px] border-t-slate-200" />
       <div class="mt-12 flex h-10 items-center justify-between">
         <h2 class=" text-2xl font-semibold uppercase text-slate-700 md:text-[32px]">
@@ -19,6 +19,7 @@ export default function Project() {
           year="2021"
           lang2="Javascript"
           lang1="Typescript"
+          link="https://mini-app-v2.vercel.app/"
         />
         <Box
           title="tesla clone"
@@ -76,17 +77,17 @@ const Box = ({
   link,
 }: BoxProps) => {
   return (
-    <div class="group transform transition-all duration-300 hover:-translate-y-1">
+    <div class="group transform transition-all duration-300 md:hover:-translate-y-1">
       <a href={link} target="blank">
         <div class=" relative box-border overflow-hidden rounded-lg border-2 border-slate-200/40 bg-white shadow-sm transition-all duration-300 group-hover:rounded-3xl">
           <div class="min-h-[180px] p-3 md:h-[360px] md:p-5">
             <img
               src={src}
               alt={alt}
-              class="h-full w-full rounded-xl bg-slate-200 object-cover transition-all duration-300 group-hover:rounded-3xl"
+              class="h-full w-full rounded-xl bg-slate-200 object-cover transition-all duration-300 md:group-hover:rounded-3xl"
             />
           </div>
-          <div class="mx-3 flex justify-between pb-3 md:mx-5 md:pb-5">
+          <div class="mx-3 mt-3 flex justify-between pb-3 md:mx-5 md:pb-5">
             <div>
               <p class="text-sm font-semibold text-slate-400 md:text-[15px]">
                 {year}

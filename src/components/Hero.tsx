@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <div class="mx-auto flex min-h-screen max-w-[1284px] flex-col">
       <Header />
-      <Main title="Software Engineer" />
+      <Main title="Rickraz" />
     </div>
   );
 }
@@ -37,7 +37,7 @@ const Main = ({ title }) => {
         {title}
       </h1>
       <p class="font-inter text-3xl font-normal uppercase text-slate-400 md:text-4xl">
-        - CLP, Indonesia
+        software Engineer
       </p>
     </section>
   );
