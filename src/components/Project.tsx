@@ -13,7 +13,7 @@ export default function Project() {
       </div>
       <div class="mt-8 grid gap-8 md:mt-12 md:grid-cols-2 md:gap-12">
         <Box
-          title="mini app"
+          title="mini apps"
           src="/mini.webp"
           alt="miniapp"
           year="2021"
