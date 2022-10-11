@@ -37,7 +37,7 @@ const Main = ({ title }) => {
         {title}
       </h1>
       <p class="font-inter text-3xl font-normal uppercase text-slate-400 md:text-4xl">
-        software Engineer
+        self-taught dev
       </p>
     </section>
   );
