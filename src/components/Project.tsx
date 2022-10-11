@@ -16,25 +16,27 @@ export default function Project() {
           title="mini apps"
           src="/mini.webp"
           alt="miniapp"
-          year="2021"
-          lang2="Javascript"
-          lang1="Typescript"
+          type="Frontend Project"
+          ts="true"
+          astro="true"
           link="https://mini-app-v2.vercel.app/"
         />
         <Box
           title="tesla clone"
           src="/tesla.webp"
           alt="teslaclone"
-          year="2021"
-          lang1="Typescript"
+          type="Frontend Project"
+          ts="true"
+          react="true"
           link="https://tesla-clone-v2.vercel.app/ "
         />
         <Box
           title="Real Estate v1"
           src="/real-v1.webp"
           alt="realestate"
-          year="2022"
-          lang1="Typescript"
+          type="Frontend Project"
+          ts="true"
+          next="true"
           link="https://rickyraz-real-estate-v1.vercel.app/"
         />
       </div>
@@ -57,24 +59,30 @@ const SegmentedControl = () => {
 
 type BoxProps = {
   title: string;
-  year: string;
+  type: string;
   src: string;
   alt: string;
-  lang1?: string;
-  lang2?: string;
-  lang3?: string;
+  ts?: string;
+  js?: string;
+  rs?: string;
   link?: string;
+  astro?: string;
+  react?: string;
+  next?: string;
 };
 
 const Box = ({
   title,
-  year,
+  type,
   src,
   alt,
-  lang1,
-  lang2,
-  lang3,
+  ts,
+  js,
+  rs,
   link,
+  astro,
+  react,
+  next,
 }: BoxProps) => {
   return (
     <div class="group transform transition-all duration-300 md:hover:-translate-y-1">
@@ -90,31 +98,64 @@ const Box = ({
           <div class="mx-3 mt-3 flex justify-between pb-3 md:mx-5 md:pb-5">
             <div>
               <p class="text-sm font-semibold text-slate-400 md:text-[15px]">
-                {year}
+                {type}
               </p>
               <h3 class="pt-1 font-sora text-xl font-bold capitalize text-slate-700 md:pt-2 md:text-2xl">
                 {title}
               </h3>
             </div>
             <ul class="flex space-x-3">
-              {lang1 && (
+              {ts && (
                 <li>
-                  <a class="rounded-full bg-[#0A84FF] py-[6px] px-3 text-[12px] font-medium text-white md:px-4 md:py-2">
-                    {lang1}
+                  <a class="rounded-full bg-[#388eeb] py-[6px] px-3 text-[12px] font-medium text-white md:px-4 md:py-2">
+                    Typescript
                   </a>
                 </li>
               )}
-              {lang2 && (
+              {js && (
                 <li>
                   <a class="rounded-full bg-[#FDBC14] py-[6px] px-3 text-[12px] font-medium text-white md:px-4 md:py-2">
-                    {lang2}
+                    Javascript
                   </a>
                 </li>
               )}
-              {lang3 && (
+              {rs && (
                 <li>
                   <a class="rounded-full bg-[#FFA53B] py-[6px] px-3 text-[12px] font-medium text-white md:px-4 md:py-2">
-                    {lang3}
+                    Rust
+                  </a>
+                </li>
+              )}
+              {astro && (
+                <li>
+                  <a
+                    href="https://astro.build/"
+                    target="_blank"
+                    class="cursor-crosshair rounded-full bg-[#0f172a] py-[6px] px-3 text-[12px] font-medium text-white md:px-4 md:py-2"
+                  >
+                    Astro
+                  </a>
+                </li>
+              )}
+              {react && (
+                <li>
+                  <a
+                    href="https://reactjs.org/"
+                    target="_blank"
+                    class="cursor-crosshair rounded-full bg-[#58d4f6] py-[6px] px-3 text-[12px] font-medium text-white md:px-4 md:py-2"
+                  >
+                    ReactJS
+                  </a>
+                </li>
+              )}
+              {next && (
+                <li>
+                  <a
+                    href="https://nextjs.org/"
+                    target="_blank"
+                    class="cursor-crosshair rounded-full bg-[#000000] py-[6px] px-3 text-[12px] font-medium text-white md:px-4 md:py-2"
+                  >
+                    NextJS
                   </a>
                 </li>
               )}
