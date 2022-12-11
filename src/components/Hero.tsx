@@ -1,6 +1,7 @@
 import { h, Fragment } from "preact";
 import { useState } from "preact/hooks";
 import dayjs from "dayjs";
+import Globe from "./Globe";
 
 export default function Hero() {
   return (
@@ -32,10 +33,11 @@ const Header = () => {
 
 const Main = ({ title }) => {
   return (
-    <section class="mt-auto mb-10 flex flex-col space-y-2 text-center md:mt-auto md:mb-16 md:text-left">
+    <section class="mt-auto mb-10 flex flex-col space-y-2  text-center md:mt-auto md:mb-16 md:text-left">
       <h1 class="font-sora text-3xl font-bold uppercase text-slate-800 md:text-5xl">
         {title}
       </h1>
+      <Globe />
       <p class="font-inter text-3xl font-normal uppercase text-slate-400 md:text-4xl">
         self-taught dev
       </p>
